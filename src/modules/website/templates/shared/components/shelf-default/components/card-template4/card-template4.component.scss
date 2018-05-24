@@ -1,0 +1,112 @@
+.shelf-component.t4 {
+    .title-component {
+        display: none;
+    }
+}
+
+.card-component-template4 {
+    background: #FFF;
+    margin: 13px;
+    text-align: center;
+    width: calc(100% - 26px);
+    display: flex;
+    flex-direction: column;
+    @media screen and (max-width: 992px) {
+        margin: 5px;
+        width: calc(100% - 10px);
+    }
+    @media screen and (max-width:767px) {
+        justify-content: center;
+        align-items: center;
+        flex-direction: row;
+        .card-footer-wrapper {
+            flex: 2;
+        }
+        .product-name-component {
+            font-size: 11px;
+            line-height: 15px;
+            padding: 0 10px;
+        }
+    }
+    .wrapper-flag {
+        position: absolute;
+        z-index: 2;
+    }
+    .name {
+        font-size: 14px;
+        color: #727272;
+        font-weight: lighter;
+        margin: 33px 0;
+    }
+    @media screen and (min-width: 768px) {
+        .image-component {
+            padding: 48%;
+        }
+    }
+    .image {
+        align-items: center;
+        overflow: hidden;
+        position: relative;
+        border: 1px solid #dddddd;
+        align-items: center;
+        justify-content: center;
+        @media screen and (min-width: 768px) {
+            img {
+                width: 160%;
+                max-width: initial;
+                position: absolute;
+                top: 0;
+                left: -30%;
+                &.ft {
+                    left: -15%;
+                    right: 0;
+                    top: 0%;
+                    bottom: 0;
+                    max-width: 130%;
+                    width: 157%;
+                }
+            }
+        }
+        @media screen and (max-width: 767px) {
+            flex: 2;
+        }
+    }
+    .bottom {
+        padding: 15px 0;
+    }
+    .bestPrice {
+        font-size: 18px;
+        font-weight: 700;
+        color: #567ebf;
+    }
+    .component-whishlist {
+        svg {
+            position: absolute;
+            right: 10px;
+            @media screen and (min-width: 480px) {
+                top: 5px;
+            }
+            bottom: 5px;
+            z-index: 2;
+        }
+    }
+    .hasbestprice {
+        h3.product-price-component {
+            color: #FF4D4D;
+        }
+        .oldprice {
+            display: flex;
+            color: #000;
+            text-decoration: line-through;
+            text-align: center;
+            justify-content: center;
+            align-items: center;
+            font-size: 16px;
+            margin-bottom: 8px;
+            & h3 {
+                font-size: 16px;
+                color: #000 !important;
+            }
+        }
+    }
+}

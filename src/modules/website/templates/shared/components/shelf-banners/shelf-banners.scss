@@ -1,0 +1,32 @@
+@import "../../../shared/mixins.scss";
+.shelf-banners-component {
+    @media screen and (max-width: 992px) {
+        padding: 8px;
+    }
+    .offset {
+        margin-left: -15px;
+        margin-right: -15px;
+        @media screen and (max-width: 991px) {
+            margin-left: -4px;
+            margin-right: -4px;
+        }
+    }
+    .shelfItem {
+        width: 286px;
+    }
+    .slick-next,
+    .slick-prev {
+        font-size: 32px !important;
+        color: #567ebf !important;
+        font-weight: 300;
+        &:before {
+            content: "" !important;
+        }
+    }
+    .slick-disabled {
+        display: none !important;
+    }
+    @media screen and(max-width:480px) {
+        text-align: center;
+    }
+}

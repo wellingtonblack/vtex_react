@@ -1,0 +1,72 @@
+.checkbox-button-component {
+    display: flex;
+    cursor: pointer;
+    .checkbox-box {
+        border: 1px solid #808080;
+        width: 35px;
+        height: 19px;
+        margin-right: 10px;
+        line-height: 21px;
+        text-align: center;
+        font-size: 14px;
+        transition: all 0.5s;
+        &.active:not(.color-selector) {
+            background: #808080;
+            color: #FFF;
+        }
+        &:hover{
+            background: #808080;
+            color: #FFF;
+        }
+
+        &.color-selector {
+            &.Areia  {
+                background: #dccbb5;
+            }   
+
+            &.Azul  {
+                background: blue;
+            }
+            &.Bege  {
+                background: beige;
+            }
+            &.Branco  {
+                background: white;
+            }
+            &.Cinza  {
+                background: gray;
+            }
+            &.Marfim  {
+                background: #fffff0;
+            }
+            &.Marrom  {
+                background: #964b00;
+            }
+            &.Natural  {
+                background: #f5f5dc;
+            }
+            &.Nude  {
+                background: #ebc8b2;
+            }
+            &.Preto {
+                background: #000;
+            }
+            &.Rosa  {
+                background: pink;
+            }
+            &.Verde {
+                background: green;
+            }
+            &.Vermelho  {
+                background: red;
+            }
+            &.Vinho  {
+                background:  #53292a; 
+            }
+            // status active
+            &.active {
+                border: 2px solid #8EAFBC;
+            }
+        }
+    }
+}

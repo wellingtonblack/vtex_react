@@ -1,0 +1,58 @@
+.banner-middle-category-component {
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;
+    .container-middle {
+        height: 100%;
+    }
+    .text-banner-wrapper {
+        height: 70vh;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+        justify-content: space-evenly;
+        @media screen and (max-width:992px){
+            height: 45vh;
+        }
+    }
+    text-align: right;
+    color: #fff;
+    .title-banner {
+        h2 {
+            font-size: 35px;
+            text-transform: uppercase;
+        }
+    }
+    .text-middle {
+        h3 {
+            margin-bottom: 20px;
+            font-size: 16px;
+            text-transform: uppercase;
+        }
+        .button-cta {
+            border: 1px solid #fff;
+            color: #fff;
+            &:hover{
+                background: rgba($color: #ffffff, $alpha: .3)
+            }
+        }
+    }
+    @media screen and (max-width:991px) {
+        text-align: center;
+        height: auto;
+        .text-banner-wrapper {
+            align-items: center;
+        }
+    }
+    @media screen and (max-width:767px) {
+        .title-banner {
+            h2 {
+                font-size: 20px;
+            }
+        }
+    }
+    @media screen and (max-width:600px){
+        background-color: #e1b3b6;
+        background-image: none!important;
+    }
+}

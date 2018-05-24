@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:vtex="http://www.vtex.com.br/2009/vtex-common" xmlns:vtex.cmc="http://www.vtex.com.br/2009/vtex-commerce"
+    lang="pt-br">
+
+<head>
+    <!--<vtex:contentPlaceHolder id="metaTags" />-->
+    <vtex:template id="2018-v1-head" />
+</head>
+
+<body class="produto product">
+    <!--<div class="richV2017 hide hidden" style="display:none;" >-->
+    <!--    <vtex.cmc:productRichSnippets showFacebook="1" fbAdmins="[fbAdmins]" fbAppId="[fbAppId]" />-->
+    <!--</div>-->
+
+    <!-- INI HEADER -->
+    <vtex:template id="2018-v1-header" />
+    <!-- FIM HEADER -->
+
+    <!-- slider produto-->
+    <div id="root-slider-produto"></div>
+
+    <div id="product-controls">
+        <script id="slider-image-product">
+            `<vtex.cmc:productImage/>`
+        </script>
+        <div id="product-reference">
+            <vtex.cmc:productReference/>
+        </div>
+        <div id="product-name">
+            <vtex.cmc:productName />
+        </div>
+        <div id="sku-selector">
+            <vtex.cmc:skuSelection />
+        </div>
+        <div id="sku-price">
+            <vtex.cmc:skuPrice />
+        </div>
+        <div id="sku-rich-selection">
+            <vtex.cmc:skuRichSelection changeImage="1" />
+        </div>
+        <div id="button-buy">
+            <vtex.cmc:BuyButton />
+        </div>
+        <div id="acessorios">
+            <vtex:contentPlaceHolder id="Acessorios" />
+        </div>
+    </div>
+
+    
+
+      <!-- INI FOOTER -->
+    <vtex:template id="2018-v1-footer" />
+    <!-- FIM FOOTER -->
+
+</body>
+
+</html>

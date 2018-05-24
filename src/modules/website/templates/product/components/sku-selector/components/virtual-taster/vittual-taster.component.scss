@@ -1,0 +1,11 @@
+.virtual-taster-component {
+    .sizebay-container #szb_fitting_room.icon > span:before, .sizebay-container #szb_size_chart.icon > span:before {
+        top: initial!important;
+        left: -22px!important;
+    }
+
+    .sizebay-container #szb_fitting_room.button_plugin.link.icon, .sizebay-container #szb_size_chart.button_plugin.link.icon {
+        padding: 0!important;
+        width: auto!important;
+    }
+}

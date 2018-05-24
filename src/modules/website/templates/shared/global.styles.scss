@@ -1,0 +1,164 @@
+@import "mixins.scss";
+
+// ---------------------------------------------------------------------------
+// size base
+html {
+    font-size: 100%;
+}
+
+body {
+    @include font-gill-normal();
+    &.active-content {
+        transition: all 0.5s ease-in-out;
+        opacity: 1; 
+    }
+}
+
+#ajaxBusy.load.loading {
+    display: none!important;
+}
+
+.wrapper {
+    max-width: #{$wrapper}px;
+}
+.space-bottom{
+    margin-bottom: 70px;
+    @media screen and (max-width: 768px){
+        margin-bottom: 40px;
+    }
+}
+
+.hidden,
+.hide {
+    display: none !important;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.no-padding {
+    padding: 0;
+}
+
+a {
+    text-decoration: none;
+    color: $c0;
+}
+
+.text-uppercase {
+    text-transform: uppercase;
+}
+
+.text-center {
+    text-align: center;
+}
+
+/*Botão padrão*/
+
+.btn {
+    display: inline-block;
+    padding: 9px 30px;
+    color: #000;
+    border: 1px solid transparent;
+    background: 0 0;
+    font-size: inherit;
+    text-transform: lowercase;
+    text-align: center;
+    -webkit-appearance: none;
+    @include pointer;
+    vertical-align: middle;
+    transition: all .1s ease-in-out;
+    -webkit-font-smoothing: inherit;
+    outline: 0;
+    border-radius: 0;
+    box-shadow: none;
+}
+
+.btn.whiteColor {
+    background-color: #FFF;
+    border: 1px solid #000;
+    &:hover {
+        background-color: #000;
+        color: #FFF;
+    }
+}
+
+.btn.blackColor {
+    background-color: #000;
+    color: #FFF;
+}
+.input-int {
+    font-size: 14px;
+    font-style: normal;
+    vertical-align: top;
+    width: 100%;
+    padding: 0;
+    color: #cbcbcb;
+    border: none;
+    outline: none;
+    border-bottom: 1px solid #cbcbcb;
+}
+/*error*/
+.common-error,
+.error {
+    color: #f66;
+    font-size: 10px;
+    padding: 3px 0;
+}
+
+/*no border*/
+
+.no-border {
+    border: 0 !important;
+}
+
+/*custom checkbox*/
+
+input[type="checkbox"] {
+    display: none;
+}
+
+input[type=checkbox]+label:before {
+    border: 1px solid #ccc;
+    background-color: #fff;
+}
+
+input[type=checkbox]+label,
+input[type=radio]+label {
+    background-image: none;
+    font-size: 10px;
+    line-height: 16px;
+    padding: 0 0 0 25px;
+    color: #999;
+    position: relative;
+    display: inline-block;
+}
+
+// no arrow
+.noarrow:after {
+    display: none;
+}
+
+/*keyframes*/
+
+@keyframes fontbulger {
+    0% {
+        width: 60%;
+    }
+    30% {
+        width: 70%;
+    }
+    100% {
+        width: 60%;
+    }
+}
+
+@keyframes leaves {
+    100% {
+        transform: scale(1);
+        -webkit-transform: scale(1);
+        -moz-animation: scale(1);
+        -o-animation: scale(1);
+    }
+}

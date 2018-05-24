@@ -1,0 +1,42 @@
+@import "../shared/mixins.scss";
+
+.page_wrap {
+    display: none;
+}
+
+#product-controls {
+    display: none;
+}
+
+.description-component {
+    margin-bottom: 30px;
+    padding: 0 10px;
+    .title-description-product {
+        font-size: 19px;
+        text-transform: uppercase;
+        color: #808080;
+        @include font-gill-normal();
+        margin-bottom: 30px;
+    }
+
+    .productDescription {
+        font-size: 19px;
+        color: #808080;
+        line-height: 21px;
+        @include font-gill-normal();
+    }
+}
+.exchanges-component {
+    margin-bottom: 30px;
+    padding: 0 10px;
+    .title-exchanges-component {
+        font-size: 19px;
+        color: #808080;
+        margin-bottom: 30px;
+        text-transform: uppercase;
+    }
+    .trade-saiba-mais {
+        font-size: 19px;
+        color: #808080!important;
+    }
+}

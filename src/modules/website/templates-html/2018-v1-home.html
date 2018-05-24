@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:vtex="http://www.vtex.com.br/2009/vtex-common" xmlns:vtex.cmc="http://www.vtex.com.br/2009/vtex-commerce"
+    lang="pt-br">
+
+<head>
+    <vtex:template id="2018-v1-head" />
+    <style>
+        body {
+            opacity: 0;
+        }
+    </style>
+</head>
+
+<body class="inactive-content">
+
+    <!-- inicio header -->
+    <vtex:template id="2018-v1-header" />
+    <!-- fim header -->
+
+    <!-- banner main react -->
+    <section id="root-banner-main">
+        <script id="banner-placeholder">
+            `<vtex:contentPlaceHolder id="Banner-slider-principal"/>`
+        </script>
+    </section>
+    <!-- end banner main react -->    
+
+    <!-- ruler information react -->
+    <section id="root-ruler-information"></section>
+
+    <!-- shelf module 1 react -->
+    <section class="root-shelf-default" data="template-1">
+        <vtex:contentPlaceHolder id="Primeira Prateleira" />
+    </section>
+    <!--end shelf module 1 -->
+
+    <!-- shelf module 2 react -->
+    <section class="root-shelf-default" data="template-2">
+        <vtex:contentPlaceHolder id="Segunda Prateleira" />
+    </section>
+    <!--end shelf module 2 -->
+
+    <!-- banner slim -->
+    <section id="root-banner-slim">
+        <script id="banner-placeholder-slim">
+            `<vtex:contentPlaceHolder id="Banner-slim"/>`
+        </script>
+    </section>
+    <!--end  banner slim -->
+    
+    <!-- shelf module 3 react -->
+    <section class="root-shelf-default" data="template-3">
+        <vtex:contentPlaceHolder id="Terceira Prateleira" />
+    </section>
+    <!--end shelf module 3 -->
+    
+    <!-- banner teste -->
+    <section id="root-banner-teste">
+        <vtex:contentPlaceHolder id="Banner-teste"/>
+    </section>
+    <!--end  banner teste -->
+    
+    <!-- INI INSTAGRAM -->
+    <section class="container-fluid wrapper" id="instagramSection">
+        <div class="row no-gutters insta">
+            <div class="col-xs-12 col-sm-12">
+                <h2>Shop instagram</h2>
+                <vtex:contentPlaceHolder id="plugin-socialbuy" />
+            </div>
+        </div>
+    </section>
+    <!-- FIM INSTAGRAM -->
+
+    <!-- INI FOOTER -->
+    <vtex:template id="2018-v1-footer" />
+    <!-- FIM FOOTER -->
+
+</body>
+
+</html>

@@ -1,0 +1,36 @@
+.composition-washing-component {
+    font-size: 19px;
+    color: #808080;
+    padding: 0 10px;
+    .title-composition {
+        margin-bottom: 30px;
+    }
+
+    .text-composition {
+        margin-bottom: 30px;
+    }
+
+    .list-composition {
+        display: flex;
+        flex-wrap: wrap;
+        .icon-composition {
+            margin-right: 40px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 15px;
+            .icon-wrapper {
+                display: block;
+                svg {
+                    width: 30px;
+                    height: 30px; 
+                    display: inline-block;
+                    vertical-align: middle;
+                    path {
+                        fill: #808080;
+                    }
+                }
+            }
+        }
+    }
+}

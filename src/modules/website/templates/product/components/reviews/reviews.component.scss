@@ -1,0 +1,14 @@
+.reviews-component {
+    padding: 0 10px;
+    margin-top: 52px;
+    @media screen and (max-width: 767px) {
+        margin-top: 50px;
+    }
+
+    #trustvox-reviews {
+        font-size: 24px;
+        margin-bottom: 20px;
+        color: #808080;
+        text-transform: uppercase;
+    }
+}

@@ -1,0 +1,35 @@
+.quantity-selector-component {
+    display: flex;
+    max-width: 265px;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+  
+    .text-quantity {
+        font-size: 16px;
+        color: #808080;
+        flex: 1;
+    }
+    .wrapper-quantity {
+        flex: 1;
+        display: flex;
+        input {
+            width: calc(100% - 70px);
+            text-align: center;
+            border: 1px solid #d5d5d5;
+            margin: 0 2px;
+        }
+        span {
+            width: 34px;
+            height: 34px;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            display: flex;
+            background: #D5D5D5;
+            color: #000;
+            font-weight: 600;
+            cursor: pointer;
+        }
+    }
+}

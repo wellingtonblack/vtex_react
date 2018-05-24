@@ -1,0 +1,45 @@
+@import "../../sprites.scss";
+img {
+    display: block;
+    height: auto;
+    max-width: 100%;
+}
+
+.close {
+    left: 0;
+}
+
+#over-header {
+    display: none;
+    @media screen and (max-width: 992px) {
+        display: block;
+    }
+}
+
+.header {
+    background: #fff;
+    width: 100%;
+    z-index: 400;
+    z-index: 999;
+    position: relative;
+    .overHeadTag {
+        .apeloHeaderTop {
+            text-align: center;
+            padding: 7px;
+            font-size: 14px;
+            a {
+                color: #fff;
+            }
+            @media screen and (max-width: 991px) {
+                font-size: 11px;
+                line-height: 15px;
+            }
+        }
+    } // medias
+    @media screen and (max-width:992px) {
+        position: fixed;
+        top: 0;
+        transition: .5s;
+        padding-bottom: 0;
+    }
+}

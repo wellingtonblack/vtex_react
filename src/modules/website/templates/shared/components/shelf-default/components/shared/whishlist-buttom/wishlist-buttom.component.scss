@@ -1,0 +1,30 @@
+.component-whishlist {
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    svg {
+        width: 20px;
+        height: 20px;
+        path {
+            &:hover {
+                fill: #808080;
+                stroke: #808080;
+            }
+        }
+    }
+    .icon-wishlist {
+        &.active {
+            path {
+                fill: #808080;
+                stroke: #808080;
+            }
+        }
+        &.inactive {
+            path {
+                fill: none;
+                stroke: #cbcbcb;
+                stroke-miterlimit: 10;
+            }
+        }
+    }
+}

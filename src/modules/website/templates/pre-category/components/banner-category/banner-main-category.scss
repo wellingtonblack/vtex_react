@@ -1,0 +1,74 @@
+.banner-main-category-component {
+    .box-banner-text {
+        text-align: right;
+        h2 {
+            color: #FFF;
+            font-size: 36px;
+            @media screen and (max-width:480px){
+                font-size: 30px;
+            }
+        }
+        span {
+            color: #FFF;
+            font-size: 22px;
+            @media screen and (max-width:480px){
+                font-size: 16px;
+            }
+        }
+        .text {
+            padding-bottom: 25px;
+        }
+    }
+    @media  screen and (min-width:992px){
+        min-height: 484px;
+       
+    }
+    @media screen and (max-width:992px){
+        padding: 0;
+    }
+    overflow: hidden;
+
+    .wrapper-banner {
+        display: flex;
+        @media  screen and (max-width:992px){
+            padding: 0;
+        }
+    }
+    .button-cta {
+        color: #fff;
+        border: 1px solid #ffffff;
+        &:hover{
+            background: rgba($color: #ffffff, $alpha: .3)
+        }
+    }
+    .text-banner-wrapper {
+        flex: 1;
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+    }
+    .banner-imagem {
+        flex: 1;
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        
+    }
+    @media screen and (max-width: 600px) {
+        .wrapper-banner{
+            flex-direction: column;
+        }
+        .banner-imagem {
+            display: block;
+        }
+        .text-banner-wrapper {
+            justify-content: center;
+            order: 2;
+        }
+        .box-banner-text {
+            text-align: center;
+            order: 1;
+            padding: 30px 0;
+        }
+    }
+}

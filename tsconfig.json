@@ -1,0 +1,21 @@
+{
+    "compilerOptions": {
+        "outDir": "./arquivos/",
+        "noImplicitAny": true,
+        "sourceMap": true,
+        "module": "esnext",
+        "target": "es5",
+        "jsx": "react",
+        "lib": [
+            "es2015",
+            "dom"
+        ],
+        "allowJs": true,
+        "allowSyntheticDefaultImports": true,
+        "preserveConstEnums": true,
+        
+    },
+    "include": [
+        "./src/**/*"
+    ]
+}

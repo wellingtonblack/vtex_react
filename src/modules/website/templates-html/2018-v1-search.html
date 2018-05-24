@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:vtex="http://www.vtex.com.br/2009/vtex-common" xmlns:vtex.cmc="http://www.vtex.com.br/2009/vtex-commerce"
+    lang="pt-br">
+
+<head>
+    <vtex:template id="2018-v1-head" />
+    <style>
+        body {
+            opacity: 0;
+        }
+    </style>
+</head>
+
+<body class="inactive-content">
+
+    <!-- inicio header -->
+    <vtex:template id="2018-v1-header" />
+    <!-- fim header --> 
+    
+    <!--inicio breadcrumb-->
+    <div class="container-fluid wrapper bread">
+        <vtex.cmc:breadCrumb />
+    </div>
+    <!--fim breadcrumb-->
+    
+    <!-- filters -->
+    <div id="root-filters-aside">
+        <vtex.cmc:advancedSearchFilter/>
+    </div>
+    <!-- end filters -->
+    
+    <div class="filter-ref">
+        <!--single departament navigator-->
+        <vtex.cmc:singleDepartmentNavigator/>
+            
+        <!--serach navigator-->
+        <vtex.cmc:searchNavigator/>
+        <vtex.cmc:searchResult layout="b82cb562-7b1e-4314-8db6-d579fc56abf2" itemCount="9" columnCount="3" showUnavailable="true" />
+    </div> 
+     
+        
+    <!-- shelf module 3 react -->
+    <section class="root-shelf-list" data="template-3"></section>
+    <!--end shelf module 3 -->
+
+
+    <!-- INI FOOTER -->
+    <vtex:template id="2018-v1-footer" />
+    <!-- FIM FOOTER -->
+    
+        <script type="text/javascript">
+        function goToTopPage(){
+            return false;
+        }
+	</script>
+
+</body>
+
+</html>

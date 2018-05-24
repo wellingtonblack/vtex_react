@@ -1,0 +1,28 @@
+.whishlist-bar-component {
+    position: relative;
+    .numberOfProducts {
+        position: absolute;
+        bottom: -14px;
+        left: 0;
+        right: 0;
+        margin: auto;
+        text-align: center;
+        font-size: 11px;
+    }
+    .icon-header {
+        width: 19px!important;
+    }
+    svg{
+        -webkit-touch-callout: none;
+        -webkit-user-select: none;
+        -khtml-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+        cursor: pointer;
+ 
+    }
+    @media screen and (max-width:575px){
+        display: none;
+    }
+}

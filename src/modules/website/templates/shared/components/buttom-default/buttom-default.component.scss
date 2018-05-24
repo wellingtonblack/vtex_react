@@ -1,0 +1,51 @@
+.button-cart-component {
+    background: #567ebf;
+    border-radius: 5px;
+    color: #FFF;
+    border: none;
+    font-weight: 300;
+    font-size: 12px;
+    padding: 13px;
+    outline: none !important;
+    font-family: 'Poppins', sans-serif;
+    .icon-add-to-cart {
+        display: inline-block;
+        // @include sprite($add-to-cart);
+        vertical-align: middle;
+        margin-right: 10px;
+    }
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+    &:after {
+        content: '';
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        width: 5px;
+        height: 5px;
+        background: rgba(255, 255, 255, .3);
+        opacity: 0;
+        border-radius: 100%;
+        transform: scale(1, 1) translate(-50%);
+        transform-origin: 50% 50%;
+    }
+    &:focus:not(:active)::after {
+        animation: ripple 1s ease-out;
+    }
+    /* Ripple magic */
+    @keyframes ripple {
+        0% {
+            transform: scale(0, 0);
+            opacity: 1;
+        }
+        20% {
+            transform: scale(25, 25);
+            opacity: 1;
+        }
+        100% {
+            opacity: 0;
+            transform: scale(40, 40);
+        }
+    }
+}

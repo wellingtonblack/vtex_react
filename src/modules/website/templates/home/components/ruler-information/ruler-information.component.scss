@@ -1,0 +1,79 @@
+// call information
+.ruler-information-component {
+    margin-top: 30px;
+    overflow: hidden;
+    @media screen and (max-width: 992px) {
+        padding: 0 8px;
+        .container-fluid {
+            padding: 0;
+        }
+    }
+}
+#root-ruler-information {
+    background-color: #e5edf1;
+    .call-information {
+        
+        padding: 20px 0;
+        .call-text {
+            display: flex;
+            align-items: center;
+            white-space: pre-line;
+            color: #7399aa;
+            line-height: 12px;
+            font-weight: 600;
+            &:last-child{
+                @media screen and (max-width:992px) {
+                    display: none;
+                }
+            }
+            &:nth-child(5){
+                @media screen and (max-width:768px) {
+                    display: none;
+                }
+            }
+            &:nth-child(4){
+                @media screen and (max-width:600px) {
+                    display: none;
+                }
+            }
+            &:nth-child(3){
+                @media screen and (max-width:460px) {
+                    display: none;
+                }
+            }
+        }
+        .fst{
+            max-width: 70px;
+        }
+        h3 {
+            font-size: 1em;
+            text-align: right;
+            padding-right: 10px;
+            line-height: 18px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+        .text-larger {
+            font-size: 2.125em;
+        }
+        .text-medium {
+            font-size: 0.6875em;
+            text-transform: uppercase;
+        }
+        .text-small {
+            font-weight: 400;
+        }
+        span {
+            font-size: 0.6875em;
+            text-align: left;
+        }
+        svg {
+            path {
+                fill: #749AAA;
+            }
+            polygon {
+                fill: #749AAA;
+            }
+        }
+    }
+}

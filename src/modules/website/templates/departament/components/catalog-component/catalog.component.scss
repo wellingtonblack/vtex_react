@@ -1,0 +1,16 @@
+@import "../../../shared/mixins.scss";
+.catalog-component {
+    max-width: #{$wrapper + 20}px;
+    margin-bottom: 40px;
+    min-height: 78vh;
+    .button-see-more {
+        background: transparent;
+        padding: 10px;
+        font-size: 17px;
+        color: #808080;
+        cursor: pointer;
+        font-weight: normal;
+        margin-top: 40px;
+       @include button-style;
+    }
+}

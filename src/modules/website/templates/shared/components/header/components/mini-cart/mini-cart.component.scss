@@ -1,0 +1,104 @@
+.mini-cart-component {
+    position: fixed;
+    height: 100vh;
+    width: 100%;
+    max-width: 300px;
+    background: #FFF;
+    top: 0;
+    bottom: 0;
+    right: -300px;
+    box-shadow: 0 0 50px rgba(0, 0, 0, .1);
+    z-index: 999;
+    transition: all 0.5s;
+    &.inactive {
+        right: -300px;
+    }
+    &.active {
+        right: 0;
+    }
+    .mini-cart-wrapper {
+        height: 100%;
+    }
+    .mini-cart-header {
+        height: 80px;
+        display: flex;
+        align-items: center;
+        padding: 0;
+        h3 {
+            font-size: 20px;
+        }
+    }
+    .mini-cart-content {
+        height: calc(100% - 249px);
+        overflow-y: scroll;
+        padding: 20px;
+    }
+    .close-navigation {
+        text-align: left;
+        display: flex;
+        align-items: center;
+        padding: 15px 23px;
+        .button-close {
+            cursor: pointer;
+        }
+    }
+    .mini-cart-footer {
+        height: 160px;
+        .mini-cart-total {
+            display: flex;
+            justify-content: space-between;
+            margin: 20px 20px 29px 20px;
+            padding: 15px;
+            border-top: 1px solid #eeeeee;
+            border-bottom: 1px solid #eeeeee;
+        }
+        .wrapper-actions {
+            display: flex;
+            flex-direction: column;
+            margin: 15px;
+            .button-go-to-checkout {
+                margin-bottom: 20px;
+                background: #FFF;
+                border: 1px solid #808080;
+                padding: 9px;
+                cursor: pointer;
+                transition: all 0.5s;
+                &:hover {
+                    border-color: #000;
+                    background: #000;
+                    color: #FFF;
+                }
+            }
+            .button-continue {
+                border: none;
+                padding: 10px;
+                background: transparent;
+            }
+        }
+    }
+    .product {
+        display: flex;
+        margin-bottom: 20px
+    }
+    .product-image {
+        background-size: cover;
+        background-position: center;
+        flex: 1;
+    }
+    .product-name-quantity {
+        flex: 1;
+        padding-left: 7px;
+    }
+    .product-name {
+        font-size: 11px;
+        line-height: 13px;
+        display: block;
+        margin: 5px;
+        text-align: left;
+        min-height: 40px;
+    }
+    .product-price {
+        display: block;
+        text-align: left;
+    }
+}

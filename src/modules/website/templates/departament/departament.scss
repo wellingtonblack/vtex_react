@@ -1,0 +1,37 @@
+    .bread-crumb {
+        ul {
+            display: flex;
+            li {
+                margin: 0 5px 0 0;
+                a{
+                    color: #808080;
+                    text-transform: lowercase;
+                }
+            }
+            li+li{
+                &:before{
+                    color: #ccc;
+                    content: "/\00a0";
+                }
+            }
+        }
+    }
+
+    .filter-ref {
+        display: none;
+    }
+
+    .text-seo-component {
+        font-size: 17px;
+        line-height: 140%;
+        color: #9f9f9f;
+        .seo-section-title {
+            text-transform: uppercase;
+            text-align: center;
+            margin-bottom: 40px;
+        }
+        .seo-section-text {
+            text-align: left;
+            line-height: 150%
+        }
+    }

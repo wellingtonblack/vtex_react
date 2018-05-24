@@ -1,0 +1,49 @@
+.card-component-template1 {
+    background: #FFF;
+    margin: 13px;
+    text-align: center;
+    width: calc(100% - 26px);
+    display: block;
+    @media screen and (max-width: 992px) {
+        margin: 5px;
+        width: calc(100% - 10px);
+    }
+    .name {
+        font-size: 20px;
+        color: #000;
+        font-weight: 500;
+        margin: 33px 0;
+    }
+    .image {
+        overflow: hidden;
+        img {
+            -webkit-transition: .3s;
+            transition: 2s;
+            &:hover {
+                transform: scale(1.1);
+            }
+            &.ft {
+                transform: scale(1.5);
+                &:hover {
+                    transform: scale(1.55);
+                }
+            }
+        }
+    }
+    .bestPrice {
+        font-size: 18px;
+        font-weight: 700;
+        color: #567ebf;
+    }
+    .component-whishlist {
+        svg {
+            position: absolute;
+            right: 10px;
+            @media screen and (min-width: 480px) {
+                top: 5px;
+            }
+            bottom: 0;
+            z-index: 2;
+        }
+    }
+}

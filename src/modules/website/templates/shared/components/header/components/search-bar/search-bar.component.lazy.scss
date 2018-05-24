@@ -1,0 +1,78 @@
+// search
+.search-bar-component {
+    svg {
+        margin-left: 0;
+        -webkit-touch-callout: none;
+        -webkit-user-select: none;
+        -khtml-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+        cursor: pointer;
+
+    }
+    .form-inline {
+        display: flex;
+    }
+    .btn-search {
+        background: none;
+        border: 0;
+        padding: 0;
+        outline: none;
+    }
+    &>div {
+        position: relative;
+    }
+    input {
+        border: 0;
+        background: transparent;
+        border-bottom: 1px solid #808080;
+        outline: none;
+        text-align: right;
+        padding-right: 8px;
+    }
+    .icon-header {
+        margin-left: 5px;
+    }
+    ul {
+        position: absolute;
+        background: #fff;
+        z-index: 999;
+        width: 99.8%;
+        left: 1px;
+        max-height: 450px;
+        overflow-y: scroll;
+        border: 1px solid #dddddd;
+        li a {
+            display: block;
+            font-size: 12px;
+            padding: 10px 20px;
+            color: #000;
+            border-bottom: 1px solid #eee;
+            min-height: 80px;
+            display: flex;
+            &:hover {
+                background-color: #f5f5f5;
+            }
+            .content {
+                display: inline-block;
+                margin-right: 10px;
+                vertical-align: middle;
+            }
+        }
+    }
+
+    .image-container {
+        display: flex;
+        flex: 1 17%;
+    }
+    
+    .product-name {
+        flex: 3 30%;
+        text-align: left;
+        font-size: 15px;
+        display: flex;
+        align-items: center;
+        padding-left: 10px;
+    }
+}

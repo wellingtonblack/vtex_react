@@ -1,0 +1,88 @@
+.slider-product-component {
+    padding: 10px;
+    margin-bottom: 30px;
+    @media screen and (max-width: 767px) {
+        height: auto;
+        max-height: 100%;
+        overflow: hidden;
+    }
+    .wrapper-slider-selector {
+        @media screen and (max-width: 992px) {
+            height: auto;
+        }
+        .slider-wrapper {
+            .slider {
+                display: flex;
+                flex: 1;
+            }
+            .slider-main {
+                flex: 2.7;
+                align-items: flex-end;
+            }
+            @media screen and (max-width: 768px) {
+                width: calc(100% + 6px);
+            }
+        }
+        @media screen and (max-width: 991px) {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+    }
+    .slide-product-image {
+        width: 100%;
+        padding: 0;
+    }
+    .slick-slide img {
+        padding: 0px 3px 6px 3px;
+    }
+    .skuselector-wrapper {
+        padding-left: 20px;
+        justify-content: end;
+        display: flex;
+        flex-direction: column; 
+        @media screen and (max-width: 767px) {
+            padding-left: 0px;
+            justify-content: center;
+            max-height: 100%;
+        }
+    }
+    .slick-dots {
+        bottom: 13px;
+    }
+    .title-product {
+        font-size: 20px;
+        text-transform: uppercase;
+        margin-bottom: 22px;
+        @media screen and (max-width: 767px) {
+            margin-top: 22px;
+        }
+    }
+    .quantity-selector-component {
+        margin-bottom: 20px;
+    }
+    .component-whishlist {
+        margin-top: 20px;
+        span {
+            font-size: 14px;
+            margin-left: 11px;
+            color: #000;
+        }
+    }
+    .slider-main {
+        .slick-prev:before,
+        .slick-next:before {
+            color: #000;
+        }
+        .slick-prev {
+            left: 20px;
+        }
+        .slick-prev,
+        .slick-next {
+            z-index: 1;
+        }
+        .slick-next {
+            right: 20px;
+        }
+    }
+}

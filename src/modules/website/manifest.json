@@ -1,0 +1,18 @@
+{
+  "short_name": "Intimissimi",
+  "name": "Intimissimi Store",
+  "gcm_sender_id": "482941778795",
+  "gcm_sender_id_comment": "Do not change the GCM Sender ID",
+  "icons": [
+    {
+      "src": "/arquivos/logo-intimissimi-app.jpg",
+      "type": "image/png",
+      "sizes": "256x256"
+    }
+  ],
+  "start_url": "/?lid=2418a4fc-6f97-4cab-bcf1-4ec3c8b5182e",
+  "background_color": "#8EAFBC",
+  "display": "standalone",
+  "scope": "/?lid=2418a4fc-6f97-4cab-bcf1-4ec3c8b5182e",
+  "theme_color": "#8EAFBC"
+}

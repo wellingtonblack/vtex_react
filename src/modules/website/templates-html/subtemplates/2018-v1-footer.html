@@ -1,0 +1,198 @@
+<footer id="footer" class="container-fluid wrapper">
+    <div style="display:none;">
+        <!-- Utilizado para autenticacao, nao apagar -->
+        <vtex.cmc:welcomeMessage/>
+    </div>
+    <div class="footer-container">
+        <div class="footer-main">
+            <div class="footer-main-row">
+                <div id="Footer-Area2" class="info">
+                    <div class="opening">
+                        <i class="icon-product-guide"></i>
+                        <h2>Guia Do Produto</h2>
+                        <i class="plus-mob"><svg width="20" viewBox="0 0 100 100"><polygon fill="#010101" points="80.2,51.6 51.4,51.6 51.4,22.6 48.9,22.6 48.9,51.6 19.9,51.6 19.9,54.1 48.9,54.1 48.9,83.1   51.4,83.1 51.4,54.1 80.4,54.1 80.4,51.6 "></polygon></svg></i>
+                    </div>
+                    <ul class="expanded">
+                        <li>
+                            <a href="/apoio-ao-cliente/guia-de-produtos/">Cuidados com seu produto</a>
+                        </li>
+                        <li>
+                            <a href="/apoio-ao-cliente/guia-de-produtos/">Tecidos</a>
+                        </li>
+                        <li>
+                            <a href="/apoio-ao-cliente/guia-de-produtos/">Guia de Estilo</a>
+                        </li>
+                        <li>
+                            <a href="/apoio-ao-cliente/guia-de-produtos/">Guia de Tamanho</a>
+                        </li>
+                    </ul>
+                </div>
+
+                <div id="Footer-Area3" class="info">
+                    <div class="opening">
+                        <i class="icon-help"></i>
+                        <h2>Posso Ajudar?</h2>
+                        <i class="plus-mob"><svg width="20" viewBox="0 0 100 100"><polygon fill="#010101" points="80.2,51.6 51.4,51.6 51.4,22.6 48.9,22.6 48.9,51.6 19.9,51.6 19.9,54.1 48.9,54.1 48.9,83.1   51.4,83.1 51.4,54.1 80.4,54.1 80.4,51.6 "></polygon></svg></i>
+                    </div>
+                    <ul class="expanded">
+                        <li class="subtitle">Entre em contato conosco</li>
+                        <li>
+                            <i class="mail">
+                                <svg viewBox="0 0 80 40" width="30" height="23">
+                                    <path d="M0,8.5v2.291v38.418V51.5h60v-2.291V10.791V8.5H0z M36.625,30.564l-5.446,5.472c-0.662,0.615-1.698,0.614-2.332,0.026  l-5.473-5.498l0.048-0.047L3.647,10.5h52.719L36.577,30.518L36.625,30.564z M20.524,30.533L2,48.355V11.923L20.524,30.533z   M21.934,31.95l5.523,5.549c0.709,0.661,1.619,0.993,2.533,0.993c0.923,0,1.85-0.339,2.581-1.02l5.496-5.522L56.304,49.5H3.686  L21.934,31.95z M39.477,30.534L58,11.922v36.433L39.477,30.534z"
+                                    />
+                                </svg>
+                            </i>
+                            <a href="javascript:void(0);" onclick="javascript:openHelpPopup();">Envie Um E-Mail</a>
+                        </li>
+                        <li>
+                            <i class="bag-footer">
+                                <svg height="28" width="30" viewBox="0 0 25 20" y="0px" x="0px">
+                                    <polygon style="fill:none;stroke:#010101;stroke-miterlimit:10;" points="16.138,17.094 0.896,17.094 2.063,6.865 14.972,6.865 "></polygon>
+                                    <path style="fill:none;stroke:#010101;stroke-miterlimit:10;" d="M11.673,7.922V6.431c0-1.761-1.429-3.189-3.189-3.189  c-1.762,0-3.189,1.428-3.189,3.189v1.491"></path>
+                                </svg>
+                            </i>
+                            <a href="/account/orders/">Seus pedidos</a>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="info footer-store">
+                    <div class="opening">
+                        <i class="icon-pin"></i>
+                        <h2>Localizar uma loja</h2>
+                        <i class="plus-mob"><svg width="20" viewBox="0 0 100 100"><polygon fill="#010101" points="80.2,51.6 51.4,51.6 51.4,22.6 48.9,22.6 48.9,51.6 19.9,51.6 19.9,54.1 48.9,54.1 48.9,83.1   51.4,83.1 51.4,54.1 80.4,54.1 80.4,51.6 "></polygon></svg></i>
+                    </div>
+                    <ul class="expanded">
+                        <li>
+                            <a href="/lojas">Localizar uma loja</a>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="info footer-newsletter">
+                    <div class="opening">
+                        <i class="icon-mail"></i>
+                        <h2>Newsletter</h2>
+                        <i class="plus-mob"><svg width="20" viewBox="0 0 100 100"><polygon fill="#010101" points="80.2,51.6 51.4,51.6 51.4,22.6 48.9,22.6 48.9,51.6 19.9,51.6 19.9,54.1 48.9,54.1 48.9,83.1   51.4,83.1 51.4,54.1 80.4,54.1 80.4,51.6 "></polygon></svg></i>
+                    </div>
+                    <ul class="newsletter">
+                        <div class="form-wrap">
+                            <input class="input-nowrap input-int" id="footerEmailNl" name="footerEmailNl" type="text" value="" autofillparam="ON" size="20"
+                                maxlength="100" placeholder="Digite seu e-mail aqui" />
+                            <i class="icon icon-arrow_go"></i>
+                            <span class="error" id="error_footerEmailNl" style="display: none;">Inserir um e-mail válido</span>
+                        </div>
+                        <div class="button-wrap">
+                            <a href="" class="btn whiteColor">Enviar</a>
+                        </div>
+                    </ul>
+                </div>
+
+            </div>
+            <div class="footer-main-row">
+
+                <div id="Footer-Area4" class="info">
+                    <div class="opening">
+                        <i class="icon-buy-guide"></i>
+                        <h2>Guia De Compra</h2>
+                        <i class="plus-mob"><svg width="20" viewBox="0 0 100 100"><polygon fill="#010101" points="80.2,51.6 51.4,51.6 51.4,22.6 48.9,22.6 48.9,51.6 19.9,51.6 19.9,54.1 48.9,54.1 48.9,83.1   51.4,83.1 51.4,54.1 80.4,54.1 80.4,51.6 "></polygon></svg></i>
+                    </div>
+                    <ul class="expanded">
+                        <li>
+                            <a href="/apoio-ao-cliente/porque-comprar-online/">Como Comprar</a>
+                        </li>
+                        <li>
+                            <a href="/apoio-ao-cliente/envios/">Entregas</a>
+                        </li>
+                        <li>
+                            <a href="/apoio-ao-cliente/devolucoes/">Devoluções</a>
+                        </li>
+                        <li>
+                            <a href="/apoio-ao-cliente/pagamentos/">Pagamentos</a>
+                        </li>
+                    </ul>
+                </div>
+
+                <div id="Footer-Area5" class="info">
+                    <div class="opening">
+                        <i class="icon-perfect-bra"></i>
+                        <h2>Sutiã Perfeito</h2>
+                        <i class="plus-mob"><svg width="20" viewBox="0 0 100 100"><polygon fill="#010101" points="80.2,51.6 51.4,51.6 51.4,22.6 48.9,22.6 48.9,51.6 19.9,51.6 19.9,54.1 48.9,54.1 48.9,83.1   51.4,83.1 51.4,54.1 80.4,54.1 80.4,51.6 "></polygon></svg></i>
+                    </div>
+                    <ul class="expanded">
+                        <li>
+                            <a href="/sutia-perfeito/">Escolha O Sutiã Perfeito</a>
+                        </li>
+                    </ul>
+                </div>
+
+                <div id="Footer-Area7" class="info">
+                    <div class="opening">
+                        <i class="icon-globe"></i>
+                        <h2>Empresa</h2>
+                        <i class="plus-mob"><svg width="20" viewBox="0 0 100 100"><polygon fill="#010101" points="80.2,51.6 51.4,51.6 51.4,22.6 48.9,22.6 48.9,51.6 19.9,51.6 19.9,54.1 48.9,54.1 48.9,83.1   51.4,83.1 51.4,54.1 80.4,54.1 80.4,51.6 "></polygon></svg></i>
+                    </div>
+                    <ul class="expanded">
+                        <li>
+                            <a href="/institucional/empresa">Sobre</a>
+                        </li>
+                        <li>
+                            <a href="/trabalhe-conosco">Trabalhe Conosco</a>
+                        </li>
+                        <li>
+                            <a href="/arealegal">Área Legal</a>
+                        </li>
+                    </ul>
+                </div>
+
+                <div id="Footer-Area8" class="info">
+                    <a href="/institucional/franquias">
+                        <img src="https://intimissimi.vteximg.com.br/arquivos/cby-int-flag-seja-franqueado.png?v=12" />
+                    </a>
+                </div>
+
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <div class="footer-bottom-row">
+                <div class="footer-lang">
+                    <div class="select-country open-overlay">
+                        <div class="toggle-select">
+                            <span class="country">Brasil</span>
+                            <span class="currency">R$</span>
+                            <svg width="20" viewBox="0 0 100 100">
+                                <polygon fill="#010101" points="80.2,51.6 51.4,51.6 51.4,22.6 48.9,22.6 48.9,51.6 19.9,51.6 19.9,54.1 48.9,54.1 48.9,83.1   51.4,83.1 51.4,54.1 80.4,54.1 80.4,51.6 "
+                                />
+                            </svg>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="footer-lang">
+                    <div class="select-language open-overlay">
+                        <div class="toggle-select">
+                            <span class="language">português</span>
+                            <svg width="20" viewBox="0 0 100 100">
+                                <polygon fill="#010101" points="80.2,51.6 51.4,51.6 51.4,22.6 48.9,22.6 48.9,51.6 19.9,51.6 19.9,54.1 48.9,54.1 48.9,83.1   51.4,83.1 51.4,54.1 80.4,54.1 80.4,51.6 "
+                                />
+                            </svg>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="footer-social-container">
+                    <vtex.cmc:socialFooter/>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom-end">
+            <vtex.cmc:footerEnd/>
+        </div>
+        <div class="footer-bottom-selos">
+            <vtex.cmc:selosFooter/>
+        </div>
+
+    </div>
+</footer>
+<script src="/arquivos/bundle.website.0.js?v=1"></script>

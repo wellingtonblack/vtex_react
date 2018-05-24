@@ -1,0 +1,16 @@
+.title-component {
+    padding: 0 0 18px 0px;
+    font-size: 28px;
+    font-weight: 400;
+    color: #7f7f7f;
+    margin: 0px 0 5px 0;
+    text-transform: uppercase;
+    span {
+        font-weight: 700;
+        color: #ff4749;
+    }
+    @media screen and (max-width:480px) {
+        text-align: center;
+        font-size: 18px;
+    }
+}

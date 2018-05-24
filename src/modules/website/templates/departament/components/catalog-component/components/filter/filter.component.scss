@@ -1,0 +1,130 @@
+@import "../../../../../shared/mixins";
+.filter-component {
+    margin: 13px;
+    .filter-title-aside {
+        .first-title-filter {
+            font-size: 18px;
+            text-transform: uppercase;
+            margin-bottom: 20px;
+            color: #808080;
+            @include font-gill-normal();
+            @media screen and (max-width: 767px) {
+                margin: 0;
+            }
+        }
+    }
+    .filter-aside {
+        margin-bottom: 20px;
+        .filter-title {
+            font-size: 16px;
+            text-transform: uppercase;
+            margin-bottom: 17px;
+            color: #808080;
+            @include font-gill-normal();
+        }
+        li {
+            margin-bottom: 10px;
+            color: #808080;
+            @include font-gill-normal();
+            a {
+                @include font-gill-normal();
+                text-transform: lowercase;
+                color: #808080;
+            }
+        }
+        input[type=checkbox]+a:before {
+            content: " ";
+            display: inline-block;
+            width: 20px;
+            height: 15px;
+            margin: 0 10px 0 0px;
+            border: 1px solid #fff;
+            visibility: visible;
+            box-shadow: 0 0 0px 2px #999;
+        }
+    }
+    .filter-column {
+        display: flex;
+        flex-wrap: wrap;
+    }
+    .filter-wrapper {
+        display: flex;
+        flex-direction: column;
+        @media screen and (max-width: 767px) {
+            position: fixed;
+            margin: 0;
+            width: 100%;
+            height: 100vh;
+            z-index: 999999;
+            background: #FFF;
+            top: 0;
+            bottom: 0;
+            padding: 0;
+            left: -100%;
+            transition: all 0.5s ease-in-out;
+            .filter-control-wrapper {
+                position: relative;   
+            }
+            &.active {
+                .filter-control-wrapper {
+                    position: fixed;   
+                }
+                z-index: 999999;
+                left: 0;
+            }
+
+            
+        }
+    }
+    
+    .filter-control-wrapper {
+        display: none;
+    }
+
+    @media screen and (max-width: 767px) {
+        .filter-control-wrapper {
+            display: block;
+        }
+        .filters-wrapper {
+            height: calc(100vh - 105px);
+            overflow-x: hidden;
+            overflow-y: scroll;
+            padding: 15px;
+        }
+        .filter-title-aside {
+            margin: 0;
+            padding: 15px;
+            box-shadow: 3px 0 49px rgba(0, 0, 0, 0.1);
+        }
+        .filter-control-wrapper {
+            position: fixed;
+            bottom: 0;
+            z-index: 9;
+            background: #FFF;
+            width: 100%;
+            display: flex;
+            left: 0;
+            right: 0;
+            padding: 10px;
+            box-shadow: 3px 0 49px rgba(0, 0, 0, .1);
+            .button-filter, .order-by-component {
+                padding: 0;
+                flex: 1;
+                margin: 0 5px;
+            }
+            select {
+                margin: 0;
+                width: 100%;
+            }
+            .button-filter, select {
+                padding: 9px;
+                background: transparent;
+                border: 1px solid #808080;
+                color: #808080;
+                &.cancel {
+                    border: none;
+                }
+            }
+        }
+    }
+}

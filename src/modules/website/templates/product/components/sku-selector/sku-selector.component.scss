@@ -1,0 +1,99 @@
+.sku-selector-component {
+    .selectors {
+        display: flex;
+        max-width: 100%;
+        flex-wrap: wrap;
+        @media screen and (max-width: 767px) {
+            max-width: 100%;
+        }
+        .item-selector-size {
+            margin-right: 12px;
+            margin-bottom: 12px;
+            border: 1px solid #808080;
+            padding: 4px 3px;
+            font-size: 14px;
+            width: 53px;
+            height: 26px;
+            text-align: center;
+            line-height: 18px;
+            color: #808080;
+            font-weight: 500;
+            cursor: pointer;
+            transition: all 0.5s ease-in-out;
+            &.selected {
+                background: #000000;
+                color: #FFF;
+                border-color: #000000;
+            }
+            &.inactive {
+                position: relative;
+                border-color: #D5D5D5;
+                color: #D5D5D5;
+                overflow: hidden;
+                cursor: initial;
+                &::before {
+                    content: "";
+                    width: 117%;
+                    height: 1px;
+                    position: absolute;
+                    top: -1px;
+                    bottom: 0;
+                    margin: auto;
+                    transform: rotate(25deg);
+                    display: block;
+                    left: -5px;
+                    right: 0;
+                    background: #D5D5D5;
+                }
+            }
+        }
+        .item-selector-color {
+            margin-right: 12px;
+            margin-bottom: 12px;
+            border: 1px solid #808080;
+            width: 53px;
+            height: 26px;
+            text-align: center;
+            font-weight: 500;
+            cursor: pointer;
+            background-size: cover;
+            background-position: center;
+            background-size: 162%;
+            position: relative;
+            &.active:before {
+                content: "";
+                display: block;
+                width: 121%;
+                height: 140%;
+                left: -9.3%;
+                top: -20.5%;
+                border: 2px solid #000;
+                position: relative;
+            }
+        }
+    }
+    .title-selector {
+        font-size: 16px;
+        color: #808080;
+        text-transform: uppercase;
+        margin-bottom: 22px;
+        display: flex;
+        .virtual-taster-component {
+            margin-left: 20px;
+        }
+    }
+    .wrapper-selectors {
+        margin-bottom: 23px;
+    }
+    .color-selected {
+        font-size: 16px;
+        text-transform: initial;
+        color: #000;
+    }
+    .error {
+        font-size: 14px;
+    }
+    .color-selector {
+        padding: 0 5px;
+    }
+}
