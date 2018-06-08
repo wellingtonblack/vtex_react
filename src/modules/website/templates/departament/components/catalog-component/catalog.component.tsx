@@ -6,22 +6,26 @@ import "./catalog.component.scss";
 import { DataProductService } from "../../../shared/services/data-products.service";
 import { ProductListComponent } from "./components/product-list/product-list.component";
 import { OrderByComponent } from "./components/order-by/order-by.component";
+import { link } from "fs";
 
 export class CatalogComponent extends React.Component<CatalogProps, CatalogState> {
 
     private offset: number = 15;
+    private filterRef: FilterComponent;
 
     constructor(props: any) {
         super(props);
         const params = this.getSearchUrl();
+
         this.state = {
-            from: 1,
-            to: 15,
+            from: 0,
+            to: 14,
             filters: params.specifications,
             params,
             products: null,
-            orderBy: "OrderByReleaseDateDESC",
+            orderBy: params.orderBy || "OrderByReleaseDateDESC",
         };
+
         this.searchProducts();
     }
 
@@ -69,7 +73,7 @@ export class CatalogComponent extends React.Component<CatalogProps, CatalogState
 
     public searchProducts() {
         (window as any).loading(true);
-        DataProductService.getProductsByCategory(this.buildProductList(this.state.params), this.state.params.searchTerm, this.state.orderBy, 1, 15)
+        DataProductService.getProductsByCategory(this.buildProductList(this.state.params), this.state.params.searchTerm, this.state.orderBy, 0, 15)
             .then((data) => {
                 (window as any).loading(false);
                 this.setState({
@@ -125,12 +129,13 @@ export class CatalogComponent extends React.Component<CatalogProps, CatalogState
                 brands: [],
                 collections: [],
                 specifications: [],
+                orderBy: "",
             };
 
             let offset = -1;
             url[0].split(/[\&\?]/g).forEach((param, index) => {
 
-                param = unescape(param);
+                param = decodeURIComponent(param);
 
                 if (param.indexOf("fq=C") > -1) {
                     const categories = param.replace("fq=C:", "").match(/\d+/g);
@@ -144,7 +149,7 @@ export class CatalogComponent extends React.Component<CatalogProps, CatalogState
                 }
 
                 if (param.indexOf("ft=") > -1) {
-                    schema.searchTerm = param.replace("ft=", "");
+                    schema.searchTerm = param.replace("ft=", "").replace(/\+/g, "%20");
                 }
 
                 if (param.indexOf("fq=B") > -1) {
@@ -154,7 +159,11 @@ export class CatalogComponent extends React.Component<CatalogProps, CatalogState
                 if (param.indexOf("fq=H") > -1) {
                     schema.collections.push({ collectionId: param.replace("fq=H:", "") });
                 }
-                
+
+                if (param.indexOf("O=") > -1) {
+                    schema.orderBy = param.replace("O=", "");
+                }
+
                 const filter = param.match(/specificationFilter\_\d.*/);
                 if (filter && filter.length > 0) {
                     schema.specifications.push(`fq=${filter[0]}`);
@@ -176,15 +185,25 @@ export class CatalogComponent extends React.Component<CatalogProps, CatalogState
             <div className="container-fluid catalog-component">
                 <div className="row no-gutters">
                     <div className="col-12 col-sm-12 col-md-3 col-lg-2">
-                        <FilterComponent handleSearchSpecification={(filters) => { this.setState({ filters }, () => { this.searchProducts(); }); }} params={this.state.params} >
-                            <OrderByComponent hidelabel={true} onChange={(orderBy) => { this.setState({ orderBy }, () => { this.searchProducts(); }); }} />
+                        <FilterComponent
+                            ref={(ref) => { this.filterRef = ref; }}
+                            handleSearchSpecification={(filters) => {
+                                filters = filters.concat(this.state.params.specifications);
+                                this.setState({ filters }, () => { this.searchProducts(); });
+                            }}
+                            params={this.state.params}>
+                            <OrderByComponent orderBy={this.state.orderBy} hidelabel={true} onChange={(orderBy) => { this.setState({ orderBy }, () => { this.searchProducts(); }); }} />
                         </FilterComponent>
                     </div>
                     <div className="col-12 col-sm-12 col-md-9 col-lg-10">
-
-
-                        {($(window).width() > 767) ? (<div className="row justify-content-end">
-                            <OrderByComponent onChange={(orderBy) => { this.setState({ orderBy }, () => { this.searchProducts(); }); }} />
+                        {($(window).width() > 767) ? (<div className="row small-filter-desk">
+                            <div className="filter-list">
+                                <ul>
+                                    {this.state.filters.map((filter) => <li onClick={this.filterRef && this.filterRef.handleFilterChange.bind(this, filter, true)}><span className="button-remove">X</span> {filter.replace(/fq=specificationFilter_\d+:/, "").replace(/\+|\%20/g, " ")}</li>)}
+                                    {(this.state.filters.length > 0) ? <li className="clear-all-filter" onClick={this.filterRef && this.filterRef.clearFilter}>Limpar Tudo</li> : ""}
+                                </ul>
+                            </div>
+                            <OrderByComponent orderBy={this.state.orderBy} onChange={(orderBy) => { this.setState({ orderBy }, () => { this.searchProducts(); }); }} />
                         </div>) : ""}
                         <ProductListComponent products={this.state.products} />
                         <div className="col-12 row no-gutters justify-content-center align-middle">

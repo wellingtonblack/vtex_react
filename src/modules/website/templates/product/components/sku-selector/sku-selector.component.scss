@@ -20,11 +20,13 @@
             font-weight: 500;
             cursor: pointer;
             transition: all 0.5s ease-in-out;
-            &.selected {
+            
+            &.selected, &:not(.inactive):hover {
                 background: #000000;
                 color: #FFF;
                 border-color: #000000;
             }
+
             &.inactive {
                 position: relative;
                 border-color: #D5D5D5;
@@ -46,6 +48,8 @@
                     background: #D5D5D5;
                 }
             }
+
+            
         }
         .item-selector-color {
             margin-right: 12px;
@@ -60,7 +64,10 @@
             background-position: center;
             background-size: 162%;
             position: relative;
-            &.active:before {
+            &:before {
+                transition: all 0.5s;
+            }
+            &.active:before, &:hover:before {
                 content: "";
                 display: block;
                 width: 121%;

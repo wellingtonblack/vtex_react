@@ -10,15 +10,18 @@ export interface BannerProps {
 export class BannerCardComponent extends React.Component<BannerProps> {
     public render() {
         return (
-            <a href={this.props.banner.href} className="cards-banner-component col-md-4">
-                <div className="banner-imagem">
-                    <img src={this.props.banner.src} alt={this.props.banner.alt} />
+            <div className="cards-banner-component">
+                <div className="image img-responsive">
+                    <a className="linkBanner" href={this.props.banner.href}>
+                        <img src={this.props.banner.src} alt={this.props.banner.alt} />
+                    </a>
                 </div>
                 <div className="text-description">
                     <div className="description-banner">{this.props.banner.description}</div>
-                    <ButtonCalltoAction href={this.props.banner.href}>{this.props.banner.alt}</ButtonCalltoAction>
+                    <ButtonCalltoAction href={this.props.banner.href}>compre já</ButtonCalltoAction>
                 </div>
-            </a>
+            </div>
         );
     }
 }
+

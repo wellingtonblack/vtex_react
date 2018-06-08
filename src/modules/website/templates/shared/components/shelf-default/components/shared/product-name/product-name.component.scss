@@ -4,5 +4,11 @@
     color: #3f4444;
     line-height: 20px;
     margin-top: 20px;
-    min-height: 43px;
+    min-height: 20px;
+    text-overflow:ellipsis;
+    white-space:nowrap;
+    overflow:hidden;
+    @media screen and(max-width:767px) {
+        white-space: normal;
+    }
 }

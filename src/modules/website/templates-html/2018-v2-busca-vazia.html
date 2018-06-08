@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:vtex="http://www.vtex.com.br/2009/vtex-common" xmlns:vtex.cmc="http://www.vtex.com.br/2009/vtex-commerce"
+    lang="pt-br">
+
+<head>
+    <vtex:contentPlaceHolder id="titleMetaTags" />
+    <vtex:template id="2018-v1-head" />
+    <style>
+        body {
+            opacity: 0;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- inicio header -->
+    <vtex:template id="2018-v1-header" />
+    <!-- fim header -->
+
+    <div class="container-fluid wrapper">
+        <div class="container-message">
+            <h1 class="title-page-error404">Poxa, não encontramos a página que você está procurando...</h1>
+            <img src="/arquivos/clothes-error404.png" alt="Intimissimi Página Não Encontrada" />
+        </div>
+
+
+
+        <div class="container-prateleira-error404">
+            <h2 class="sub-title-page-error404">...mas confira as novidades Intimissimi</h2>
+            <!-- shelf module 1 react -->
+            <section class="root-shelf-default" data="template-1">
+                <vtex:contentPlaceHolder id="Primeira Prateleira" />
+            </section>
+
+            <div class="box-cta-view-more-products">
+                <a href="http://www.intimissimi.com.br/novidades/">ver mais novidades</a>
+            </div>
+            <div class="text-center" style="margin-top:50px;">
+                <script>
+                    $(document).ready(function () { $('.busca .btn-buscar').livequery(function () { $(this).addClass('btn whiteColor').val('procurar') }) });
+                </script>
+                <vtex.cmc:fullTextSearchBox />
+            </div>
+
+            <div class="seo-section">
+                <vtex:contentPlaceHolder id="SEO Section" />
+            </div>
+            <!-- shelf module 3 react -->
+            <section class="root-shelf-default" data="template-3">
+                <vtex:contentPlaceHolder id="Quem viu" />
+            </section>
+            <!--end shelf module 3 -->
+        </div>
+    </div>
+    <!-- INI FOOTER -->
+    <vtex:template id="2018-v1-footer" />
+    <!-- FIM FOOTER -->
+</body>
+
+</html>

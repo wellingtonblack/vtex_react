@@ -13,7 +13,7 @@ export class DataProductService {
     public static getProductsByCategory(paths: string[], search: string, orderby: string, _from: number = 1, _to: number = 9): Promise<ProductApi[]> {
         return new Promise<ProductApi[]>((resolve, reject) => {
             $.ajax({
-                url: `${this.db.endpoint()}/search/${(paths && paths.length > 0) ? `?${paths.join("&")}&` : `${(search) ? search : ""}?`}_from=${_from}&_to=${_to}&O=${orderby}`,
+                url: `${this.db.endpoint()}/search/${(search) ? search : ""}${(paths && paths.length > 0) ? `?${paths.join("&")}&` : `?`}_from=${_from}&_to=${_to}&O=${orderby}`,
                 type: "GET",
                 success: (data: ProductApi[]) => {
                     resolve(data);

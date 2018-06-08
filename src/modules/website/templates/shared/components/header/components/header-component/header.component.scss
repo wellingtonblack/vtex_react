@@ -20,8 +20,8 @@
     padding-top: 15px;
     align-items: center;
     .logo {
-        width: 173.5px;
-        height: 37.4px;
+        width: 173px;
+        height: 37px;
         display: block;
     }
     .header-center {
@@ -125,5 +125,15 @@
                 stroke: #000;
             }
         }
+    }
+}
+
+#over-header {
+    @media screen and (max-width: 991px) {
+        padding-bottom: 128px!important;    
+    }
+
+    @media screen and (max-width: 560px) {
+        padding-bottom: 143px!important;    
     }
 }

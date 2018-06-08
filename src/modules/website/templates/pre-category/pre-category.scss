@@ -3,3 +3,13 @@
         padding-left: 15px;
     }
 }
+
+#over-header {
+    @media screen and (max-width: 991px) {
+        padding-bottom: 111px!important;    
+    }
+
+    @media screen and (max-width: 560px) {
+        padding-bottom: 125px!important;    
+    }
+}

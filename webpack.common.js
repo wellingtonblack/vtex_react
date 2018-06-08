@@ -7,6 +7,7 @@ const webpack = require('webpack');
 
 module.exports = {
     entry: {
+        common: './src/modules/common/app.ts',
         website: './src/modules/website/app.tsx',
         checkout: './src/modules/checkout/app.tsx'
     },

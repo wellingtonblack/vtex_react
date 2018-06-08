@@ -111,6 +111,11 @@
                 flex: 1!important;
                 text-align: left;
                 padding-left: 20px;
+                color: #fff;
+                border-bottom: 1px solid #fff;
+                &::placeholder{
+                    color:#fff;
+                }
             }
             button {
                 order: 1;

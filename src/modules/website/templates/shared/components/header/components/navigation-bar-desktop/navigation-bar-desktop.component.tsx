@@ -87,10 +87,8 @@ export class NavigationBarDesktop extends React.Component<INavigationProps, INav
         }
     }
 
-    
-    public render() {
 
-        
+    public render() {
 
         return (
             <div id="navigation-bar-component-desktop" className="ref-nav">
@@ -111,7 +109,6 @@ export class NavigationBarDesktop extends React.Component<INavigationProps, INav
                                     }}
                                     onMouseOut={this.mouseOut.bind(this)}
                                     className={`ref-nav ${(item.isVisible) ? "active-link" : ""}`}>
-
                                     <a className={`ref-nav text-uppercase ${item.highlighted ? "highlighted" : ""}`} href={item.link}>{item.name}</a>
                                 </li>
                             );
@@ -122,12 +119,16 @@ export class NavigationBarDesktop extends React.Component<INavigationProps, INav
                 <ul className={`wrapper-subnav ref-nav`} onMouseOut={this.mouseOut.bind(this)}>
                     {
                         this.state.items.map((item, index) => {
-                            return <li style={{ backgroundColor: this.state.changeColor, minWidth: item.size  }} className={`${(item.isVisible) ? "active" : "inactive"} firstNav ref-nav`}>
-                                {(item.siblings && item.siblings.length > 0) ? this.getSiblings(item.siblings, item, true) : ""}
-                                <div className="wrapper-banners">
-                                    {item.banners.map((banner) => <div className="banner ref-nav"><a href={banner.href}><img src={`/arquivos/${banner.src}`} alt="" className="ref-nav" /></a></div>)}
-                                </div>
-                            </li>;
+                            return ((item.siblings && item.siblings.length > 0) || (item.banners && item.banners.length > 0)) ? (
+                                <li style={{ backgroundColor: this.state.changeColor, minWidth: item.size }} className={`${(item.isVisible) ? "active" : "inactive"} firstNav ref-nav`}>
+                                    {(item.siblings && item.siblings.length > 0) ? this.getSiblings(item.siblings, item, true) : ""}
+                                    {(item.banners && item.banners.length > 0) ? (
+                                        <div className="wrapper-banners">
+                                            {item.banners.map((banner) => <div className="banner ref-nav"><a href={banner.href}><img src={`/arquivos/${banner.src}`} alt="" className="ref-nav" /></a></div>)}
+                                        </div>
+                                    ) : ""}
+                                </li>
+                            ) : "";
                         })
                     }
                 </ul>

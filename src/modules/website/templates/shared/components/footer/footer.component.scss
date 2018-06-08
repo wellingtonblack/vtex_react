@@ -98,6 +98,30 @@
                 }
             }
         }
+        .footer-country{
+            display: none!important;
+            .footer-overlay-inner{
+                h2{
+                    margin-bottom: 30px;
+                    text-transform: uppercase;
+                }
+            }
+            
+        }
+        #country{
+            display: none;
+        }
+        .list-container {
+            display: flex;
+            justify-content: space-between;
+            line-height: 30px;
+        }
+        .open-overlay{
+            display: block!important;
+        }
+        .plusefeito{
+            transform: rotate(135deg);
+        }
         .footer-bottom-end {
             display: flex;
             justify-content: space-around;
@@ -125,9 +149,10 @@
         .logo-by{
             display: flex;
             justify-content: flex-end;
+            margin-bottom: 40px;
             svg{
                 width: 80px;
-                height: 30px;
+                height: 41px;
             }
         }
     }
@@ -219,6 +244,7 @@
             }
             .logo-by{
                 justify-content: center;
+                
             }
             @media screen and(max-width:480px) {
                 .footer-bottom {

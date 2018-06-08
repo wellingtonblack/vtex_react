@@ -22,6 +22,11 @@ export class FooterController extends BaseController {
         $(".opening").click(function() {
             $(this).next(".expanded").toggle("slow").next(".plus-mob").toggleClass("plusefeito");
         });
+
+        // tslint:disable-next-line:only-arrow-functions
+        // $(".footer-lang").click(function() {
+        //     $(".footer-country").slideUp("slow").toggleClass("open-overlay");
+        // });
     }
 }
 

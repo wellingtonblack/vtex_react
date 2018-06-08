@@ -1,0 +1,40 @@
+.cards-banner-component {
+    background: #FFF;
+    margin: 13px;
+    text-align: center;
+    width: calc(100% - 26px);
+    display: block;
+    @media screen and (max-width: 992px) {
+        margin: 4px;
+        width: calc(100% - 8px);    
+    }
+    .image {
+        overflow: hidden;
+        img {
+            transition: 2s;
+            &:hover {
+                transform: scale(1.1);
+            }
+        }
+    }
+    .text-description {
+        text-align: center;
+        .description-banner {
+            font-size: 20px;
+            color: #000;
+            font-weight: 500;
+            margin: 33px 0;
+        }
+    }
+    .button-cta {
+        &:hover {
+            background: #000;
+            color: #fff;
+        }
+    }
+    @media screen and (max-width: 480px) {
+        .box-banner-text {
+            text-align: center;
+        }
+    }
+}

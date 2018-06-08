@@ -3,7 +3,7 @@ export interface CheckboxButtonProps {
     status: boolean;
     innerContent?: boolean;
     color?: string;
-    handleCheck?(value: string, state: boolean): void;
+    handleCheck?(value: string, status: boolean): void;
 }
 
 export interface CheckboxButtonState {

@@ -15,6 +15,6 @@ export interface Sibling {
 } 
 
 export interface BannerItemModel {
-    href: string;
-    src: string;
+    href?: string;
+    src?: string;
 } 

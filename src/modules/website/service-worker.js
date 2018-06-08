@@ -1,21 +1,22 @@
 // versão dos arquivos na vtex
-const version = 15;
+const version = 19;
 
 // versão do cache no browser
-const cache_version = 20;
+const cache_version = 26;
 
 const files = [
+  `/arquivos/bundle.v${version}.busca-vazia.js`,
   `/arquivos/bundle.v${version}.category.js`,
-  `/arquivos/bundle.v${version}.category~department~home.js`,
-  `/arquivos/bundle.v${version}.category~home.js`,
   `/arquivos/bundle.v${version}.checkout.js`,
   `/arquivos/bundle.v${version}.department.js`,
+  `/arquivos/bundle.v${version}.everywear.js`,
   `/arquivos/bundle.v${version}.home.js`,
+  `/arquivos/bundle.v${version}.landing-template-1.js`,
   `/arquivos/bundle.v${version}.product.js`,
   `/arquivos/bundle.v${version}.shared.js`,
-  `/arquivos/bundle.v${version}.vendors~category~home~product.js`,
   `/arquivos/bundle.v${version}.vendors~shared.js`,
-  `/arquivos/bundle.v${version}.website.js`,
+  `/arquivos/bundle.v${version}.website.js`,  
+  
 
   // vtex files
   "https://io.vtex.com.br/front-libs/jquery/1.8.3/jquery-1.8.3.min.js",

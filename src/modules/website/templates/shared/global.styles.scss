@@ -135,6 +135,10 @@ input[type=radio]+label {
     display: inline-block;
 }
 
+.bread-crumb {
+    margin: 15px 0px;
+}
+
 // no arrow
 .noarrow:after {
     display: none;

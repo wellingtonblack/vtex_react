@@ -1,5 +1,6 @@
 .checkbox-button-component {
     display: flex;
+    align-items: center;
     cursor: pointer;
     .checkbox-box {
         border: 1px solid #808080;
@@ -10,6 +11,9 @@
         text-align: center;
         font-size: 14px;
         transition: all 0.5s;
+        display: flex;
+        align-items: center;
+        justify-content: center;
         &.active:not(.color-selector) {
             background: #808080;
             color: #FFF;

@@ -22,6 +22,9 @@ export class FilterComponent extends React.Component<FilterProps, FilterState> {
             filterOpen: false,
         };
 
+        this.handleFilterChange = this.handleFilterChange.bind(this);
+        this.clearFilter = this.clearFilter.bind(this);
+
         FilterService.getFilter(this.state.filterPath)
             .then((data) => {
                 this.setState({
@@ -76,6 +79,32 @@ export class FilterComponent extends React.Component<FilterProps, FilterState> {
         return false;
     }
 
+    public handleFilterChange(value: string, status: boolean) {
+
+        if (!status) {
+            this.state.filters.push(value);
+        } else {
+            const idx = this.state.filters.indexOf(value);
+            if (idx > -1) {
+                this.state.filters.splice(idx, 1);
+            }
+        }
+
+        this.setState({
+            filters: this.state.filters,
+        }, () => {
+            this.props.handleSearchSpecification(this.state.filters);
+        });
+    }
+
+    public clearFilter() {
+        this.setState({
+            filters: [],
+        }, () => {
+            this.props.handleSearchSpecification(this.state.filters);
+        });
+    }
+
     public render() {
         return (
             <div className="filter-component">
@@ -106,6 +135,17 @@ export class FilterComponent extends React.Component<FilterProps, FilterState> {
                                                             </li>
                                                         );
                                                     })}
+                                                    {(window.location.pathname.toLowerCase() !== department.Link.toLowerCase() + "/" && window.location.pathname.toLowerCase() !== department.Link.toLowerCase() + "/") ? (
+                                                        <li>
+                                                            <a href={department.Link}>
+                                                                <CheckboxButton
+                                                                    status={false}
+                                                                    value="teste">
+                                                                    ver tudo de {department.Name}
+                                                                </CheckboxButton>
+                                                            </a>
+                                                        </li>
+                                                    ) : ""}
                                                 </ul>
                                             ) : ""}
                                         </div>
@@ -113,43 +153,29 @@ export class FilterComponent extends React.Component<FilterProps, FilterState> {
                                 })}
                                 {Object.keys(this.state.filter.SpecificationFilters).map((filterName) => {
                                     return (
-                                        ((filterName.toLocaleLowerCase() !== "gênero" && 
-                                          filterName.toLocaleLowerCase() !== "modelador" && 
-                                          filterName.toLocaleLowerCase() !== "promoção") ? (
-                                            <div className="filter-aside">
-                                                <h3 className="filter-title">{filterName}</h3>
-                                                <ul className={`${(this.isInner(filterName) || (filterName.toLocaleLowerCase() === "cor")) ? "filter-column" : ""}`}>
-                                                    {this.state.filter.SpecificationFilters[filterName].map((specification: any, index: number) => {
-                                                        return (
-                                                            <li key={index}>
-                                                                <CheckboxButton
-                                                                    color={(filterName.toLocaleLowerCase() === "cor") ? specification.Name : null}
-                                                                    innerContent={this.isInner(filterName)}
-                                                                    status={false}
-                                                                    handleCheck={(value: string, state: boolean) => {
-                                                                        if (state) {
-                                                                            this.state.filters.push(value);
-                                                                        } else {
-                                                                            const idx = this.state.filters.indexOf(value);
-                                                                            if (idx > -1) {
-                                                                                this.state.filters.splice(idx, 1);
-                                                                            }
-                                                                        }
-                                                                        this.setState({
-                                                                            filters: this.state.filters,
-                                                                        }, () => {
-                                                                            this.props.handleSearchSpecification(this.state.filters);
-                                                                        });
-                                                                    }}
-                                                                    value={this.getValue(specification.Link)}>
-                                                                    {specification.Name}
-                                                                </CheckboxButton>
-                                                            </li>
-                                                        );
-                                                    })}
-                                                </ul>
-                                            </div>
-                                        ) : "")
+                                        ((filterName.toLocaleLowerCase() !== "gênero" &&
+                                            filterName.toLocaleLowerCase() !== "modelador" &&
+                                            filterName.toLocaleLowerCase() !== "promoção") ? (
+                                                <div className="filter-aside">
+                                                    <h3 className="filter-title">{filterName}</h3>
+                                                    <ul className={`${(this.isInner(filterName) || (filterName.toLocaleLowerCase() === "cor")) ? "filter-column" : ""}`}>
+                                                        {this.state.filter.SpecificationFilters[filterName].map((specification: any, index: number) => {
+                                                            return (
+                                                                <li key={index}>
+                                                                    <CheckboxButton
+                                                                        color={(filterName.toLocaleLowerCase() === "cor") ? specification.Name : null}
+                                                                        innerContent={this.isInner(filterName)}
+                                                                        status={this.state.filters.indexOf(this.getValue(specification.Link)) > -1}
+                                                                        handleCheck={this.handleFilterChange}
+                                                                        value={this.getValue(specification.Link)}>
+                                                                        {specification.Name}
+                                                                    </CheckboxButton>
+                                                                </li>
+                                                            );
+                                                        })}
+                                                    </ul>
+                                                </div>
+                                            ) : "")
                                     );
                                 })}
                             </div>

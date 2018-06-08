@@ -1,6 +1,6 @@
 @import "../../../../../shared/mixins";
 .filter-component {
-    margin: 13px;
+    margin: 6px 13px;
     .filter-title-aside {
         .first-title-filter {
             font-size: 18px;
@@ -25,6 +25,7 @@
         li {
             margin-bottom: 10px;
             color: #808080;
+            line-height: 20px;
             @include font-gill-normal();
             a {
                 @include font-gill-normal();

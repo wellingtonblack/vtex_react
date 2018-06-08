@@ -13,6 +13,9 @@
         color: #000;
         font-weight: 500;
         margin: 33px 0;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        overflow: hidden;
     }
     .image {
         overflow: hidden;

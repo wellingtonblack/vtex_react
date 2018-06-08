@@ -33,18 +33,12 @@ export class HeaderComponent extends React.Component<HeaderProps, HeaderState> {
             this.setState({
                 headerColor: e.detail,
             }, () => {
-                // if ($(window).width() > 991) {
-                //     document.querySelector(".apeloHeaderTop").setAttribute("style", `background-color:${this.state.headerColor}`);
-                // }
                 document.querySelector(".header").setAttribute("style", `background-color:${this.state.headerColor}`);
             });
         });
 
-
-
         window.onresize = (event) => {
             this.forceUpdate();
-            this.setHeigthOverHeader();
         };
 
         DataUserService.getCurrentUser()
@@ -77,7 +71,6 @@ export class HeaderComponent extends React.Component<HeaderProps, HeaderState> {
                 }
             });
 
-
         window.addEventListener("load.wishlist", (event: Event) => {
 
             (window as any).loading(true);
@@ -93,18 +86,6 @@ export class HeaderComponent extends React.Component<HeaderProps, HeaderState> {
                     }
                 });
         }, false);
-    }
-
-    public componentWillMount() {
-        setTimeout(() => {
-            this.setHeigthOverHeader();
-        }, 500);
-    }
-
-    public setHeigthOverHeader() {
-        const header = document.querySelector(".header");
-        const heigth = header ? header.clientHeight : 0;
-        document.querySelector("#over-header").setAttribute("style", `padding-bottom:${heigth}px`);
     }
     
     public render() {
@@ -138,7 +119,7 @@ export class HeaderComponent extends React.Component<HeaderProps, HeaderState> {
                         <div className="header-left col-sm-4">
                             <div className="institucional">
                                 <p className="nossas-lojas-menu">
-                                    <a href="/institucional/lojas">
+                                    <a href="/lojas">
                                         encontre uma loja
                             </a>
                                 </p>

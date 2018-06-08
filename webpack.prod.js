@@ -4,7 +4,7 @@ const webpack = require('webpack');
 const merge = require('webpack-merge');
 const common = require('./webpack.common.js');
 
-const version = 15;
+const version = 19;
 
 module.exports = merge(common, {
     mode: "production",

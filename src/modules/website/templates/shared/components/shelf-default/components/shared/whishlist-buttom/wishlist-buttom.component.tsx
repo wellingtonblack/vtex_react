@@ -40,11 +40,13 @@ export class WhishListComponent extends React.Component<WishlistProps, WishlistS
     }
 
     public handleClick(event: Event) {
-        
+
         event.preventDefault();
+        event.stopPropagation();
 
         if (!this.state.user || !this.state.user.IsUserDefined) {
             window.dispatchEvent(new CustomEvent("login"));
+            window.scrollTo(500, 0);
             return;
         }
 
@@ -65,7 +67,7 @@ export class WhishListComponent extends React.Component<WishlistProps, WishlistS
                 });
 
         } else {
-            
+
             const product: WhishListModel = {
                 sku: this.props.product.skuId.toString(),
                 name: this.props.product.name,
@@ -99,7 +101,7 @@ export class WhishListComponent extends React.Component<WishlistProps, WishlistS
             <div className={`component-whishlist`} >
                 <svg onClick={this.handleClick.bind(this)} x="0px" y="0px" className={`${(this.state.active) ? "active" : "inactive"} icon-wishlist`} viewBox="0 0 14.719 13.235"> <path d="M10.527,0.525c-1.352,0-2.53,0.661-3.172,1.645 C6.714,1.187,5.536,0.525,4.185,0.525C2.149,0.525,0.5,2.021,0.5,3.865c0,3.374,6.855,8.736,6.855,8.736s6.856-5.224,6.856-8.736 C14.212,2.021,12.563,0.525,10.527,0.525z" />
                 </svg>
-                {(this.props.children) ? <span className="children">{this.props.children}</span> : "" }
+                {(this.props.children) ? <span className="children">{this.props.children}</span> : ""}
             </div>
         );
     }

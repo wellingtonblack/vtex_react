@@ -1,32 +1,19 @@
 .cards-banner-component {
-    background: #FFF;
-    margin: 13px;
-    text-align: center;
-    width: calc(100% - 26px);
-    display: block;
-    @media screen and (max-width: 992px) {
-        margin: 4px;
-        width: calc(100% - 8px);    
-    }
-    .image {
-        overflow: hidden;
+    .banner-imagem {
+        margin-bottom: 25px;
+        border: 1px solid #dddddd;
         img {
-            transition: 2s;
-            &:hover {
-                transform: scale(1.1);
-            }
+            width: 100%;
         }
     }
     .text-description {
         text-align: center;
-        .description-banner {
-            font-size: 20px;
-            color: #000;
-            font-weight: 500;
-            margin: 33px 0;
-        }
+    }
+    .description-banner {
+        margin-bottom: 15px;
     }
     .button-cta {
+        margin-bottom: 25px;
         &:hover {
             background: #000;
             color: #fff;

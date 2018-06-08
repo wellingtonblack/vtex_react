@@ -1,0 +1,105 @@
+.busca-vazia {
+    ul {
+        &.ui-autocomplete.ui-menu.ui-widget.ui-widget-content.ui-corner-all {
+            position: absolute;
+            background: #fff;
+            z-index: 999;
+            width: 25% !important;
+            @media screen and (max-width: 992px) {
+                width: 75% !important;
+            }
+            left: 1px;
+            max-height: 450px;
+            overflow-y: scroll;
+            border: 1px solid #dddddd;
+            li a {
+                display: block;
+                font-size: 12px;
+                padding: 10px 20px;
+                color: #000;
+                border-bottom: 1px solid #eee;
+                min-height: 30px;
+                display: flex;
+                &:hover {
+                    background-color: #f5f5f5;
+                }
+            }
+        }
+    }
+    .browse-container {
+        display: flex;
+        align-items: center;
+    }
+    .search-middle {
+        text-align: center;
+        margin: 100px auto;
+    }
+    .container-message {
+        .title-page-error404 {
+            text-align: center;
+            font-size: 28px;
+            margin-top: 10px;
+        }
+        img {
+            width: 60%;
+            margin: 40px auto;
+        }
+    }
+    .container-prateleira-error404 {
+        .sub-title-page-error404 {
+            text-align: center;
+            font-size: 26px;
+            padding-left: 0;
+            margin-bottom: 30px;
+        }
+        .box-cta-view-more-products {
+            display: block;
+            text-align: center;
+            margin-bottom: 60px;
+            a {
+                padding: 20px 30px;
+                background: #000;
+                color: #FFF;
+                font-size: 12px;
+                text-transform: uppercase;
+                border: 1px solid #000;
+                transition: .2s;
+                display: inline-block;
+                &:hover {
+                    background: #FFF;
+                    color: #000;
+                }
+            }
+        }
+        .busca select,
+        .busca label,
+        .busca legend {
+            display: none;
+        }
+        .busca input {
+            height: 42px
+        }
+        .busca .btn-buscar {
+            width: 25%;
+            padding: 0;
+            background-color: #000;
+            border: 1px solid #000;
+            color: #fff;
+            &:hover {
+                background-color: #fff;
+                color: #000;
+            }
+            @media screen and (max-width: 480px) {
+                width: 40% !important;
+            }
+        }
+        .busca .fulltext-search-box {
+            width: 30%;
+            padding: 0 9px;
+            outline: none;
+            @media screen and (max-width: 480px) {
+                width: 50% !important;
+            }
+        }
+    }
+}

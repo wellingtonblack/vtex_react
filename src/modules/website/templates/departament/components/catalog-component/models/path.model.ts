@@ -4,4 +4,5 @@ export interface PathModel {
     specifications: any[];
     collections?: any[];
     searchTerm?: string;
+    orderBy?: string;
 }

@@ -3,34 +3,28 @@ import "./order-by.component.scss";
 
 export interface OrderByProps {
     hidelabel?: boolean;
+    orderBy: string;
     onChange(value: string): void;
 }
 
 
 export interface OrderByState {
-    value: string;
+
 }
 
 export class OrderByComponent extends React.Component<OrderByProps, OrderByState> {
 
     constructor(props: OrderByProps) {
         super(props);
-        this.state = {
-            value: "OrderByReleaseDateDESC",
-        };
-        this.props.onChange(this.state.value);
+
     }
 
     public render() {
         return (
             <div className="order-by-component">
                 {(!this.props.hidelabel) ? (<label htmlFor="order">ORDERNAR: </label>) : ""}
-                <select value={this.state.value} onChange={(e) => {
-                    this.setState({
-                        value: e.target.value,
-                    }, () => {
-                        this.props.onChange(this.state.value);
-                    });
+                <select value={this.props.orderBy} onChange={(e) => {
+                    this.props.onChange(e.target.value);
                 }}>
                     <option value="OrderByReleaseDateDESC">Data de lançamento</option>
                     <option value="OrderByPriceASC">Menor preço</option>

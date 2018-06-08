@@ -11,6 +11,39 @@
         cursor: pointer;
         font-weight: normal;
         margin-top: 40px;
-       @include button-style;
+        @include button-style;
+    }
+    .small-filter-desk {
+        padding: 0 28px;
+        justify-content: space-between;
+        align-items: center;
+    }
+    .filter-list {
+        ul {
+            display: flex;
+            align-items: baseline;
+            li {
+                margin-right: 10px;
+                cursor: pointer;
+                display: flex;
+                font-size: 14px;
+                align-items: baseline;
+                .button-remove {
+                    border: 1px solid #808080;
+                    font-size: 11px;
+                    width: 15px;
+                    height: 15px;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    background: #f3f3f3;
+                    margin-right: 5px;
+                    font-size: 13px;
+                }
+                &.clear-all-filter {
+                    text-decoration: underline;
+                }
+            }
+        }
     }
 }

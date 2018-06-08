@@ -1,7 +1,18 @@
 <script>
     var items = [
         {
-            banners: ["Banner_Aba_Novidades.jpg"],
+            banners: [],
+            link: "/dia-dos-namorados",
+            name: "Passion",
+            highlighted: true,
+        },
+        {
+            banners: [
+                {
+                    src: "Aba_Novidades_Preview.jpg",
+                    href: "/primavera-verao",
+                },
+            ],
             link: "/novidades/?O=OrderByReleaseDateDESC",
             name: "Novidades",
             siblings: [{
@@ -28,15 +39,30 @@
                 ],
             }],
         },
-         {
-            banners: ["Banner_Aba_70_in_home.jpg","Banner_Aba_Coleção_Bellagio.jpg"],
+        {
+            banners: [
+                {
+                    src: "Banner_Aba_70_in_rome.jpg",
+                    href: "/1260",
+                },
+                {
+                    src: "Banner_Aba_colecao_Bellagio.jpg",
+                    href: "/1258",
+                },
+            ],
             link: "/novidades/?O=OrderByReleaseDateDESC",
             name: "Coleção",
-            siblings: []
+
         },
         {
-            banners: ["Aba_Sutias_Bra.gif"],
-            link: "/novidades/?O=OrderByReleaseDateDESC",
+            banners: [
+                {
+                    src: "Aba_Sutias_Bra.gif",
+                    href: "/sutias/?O=OrderByReleaseDateDESC",
+                },
+            ],
+            link: "/feminino",
+            size: "81%",
             name: "Feminino",
             siblings: [{
                 items: [{
@@ -104,7 +130,7 @@
                         name: "Ocasião",
                     },
                     {
-                    items: [
+                        items: [
                             {
                                 link: "/sutias/renda?map=c,c,specificationFilter_43",
                                 name: "Renda",
@@ -156,7 +182,7 @@
                                 link: "/calcinhas/tanga/?O=OrderByReleaseDateDESC",
                                 name: "Tanga",
                             },
-                            
+
                         ],
                         name: "Modelo",
 
@@ -195,12 +221,12 @@
                                 name: "Algodão",
                             },
                             {
-                                link: "/calcinhas/renda?map=c,c,specificationFilter_46",
-                                name: "Renda",
-                            },
-                            {
                                 link: "/calcinhas/microfibra?map=c,c,specificationFilter_46",
                                 name: "Microfibra",
+                            },
+                            {
+                                link: "/calcinhas/renda?map=c,c,specificationFilter_46",
+                                name: "Renda",
                             },
                             {
                                 link: "/calcinhas/ZERO costura?map=c,c,specificationFilter_46",
@@ -212,13 +238,9 @@
                     ],
                 },
                 {
-                    link: "/lingeries/?O=OrderByReleaseDateDESC",
-                    name: "Lingerie",
-                },
-                {
                     link: "/vestuario/Feminino?map=c,c,specificationFilter_21&O=OrderByReleaseDateDESC",
                     name: "Vestuário",
-                     siblings: [{
+                    siblings: [{
                         items: [
                             {
                                 link: "/vestuario/blusa/Feminino?map=c,c,specificationFilter_21&O=OrderByReleaseDateDESC",
@@ -237,7 +259,7 @@
                                 name: "Casaco",
                             },
                             {
-                                link: "/vestuario/casaco/Feminino?map=c,c,specificationFilter_21&O=OrderByReleaseDateDESC",
+                                link: "/vestuario/legging-e-calca/Feminino?map=c,c,specificationFilter_21&O=OrderByReleaseDateDESC",
                                 name: "Legging e Calça",
                             },
                             {
@@ -248,12 +270,13 @@
                                 link: "/vestuario/vestido/Feminino?map=c,c,specificationFilter_21&O=OrderByReleaseDateDESC",
                                 name: "Vestido",
                             },
-                            
+
                         ],
                         name: "Categoria",
                     },
                     ],
                 },
+
                 {
                     link: "/noite/Feminino?map=c,c,specificationFilter_21&O=OrderByReleaseDateDESC",
                     name: "Linha noite",
@@ -277,6 +300,10 @@
                     ],
                 },
                 {
+                    link: "/lingeries/?O=OrderByReleaseDateDESC",
+                    name: "Lingerie",
+                },
+                {
                     link: "/acessorios/Feminino?map=c,c,specificationFilter_21&O=OrderByReleaseDateDESC",
                     name: "Acessórios",
                 },
@@ -292,7 +319,13 @@
             }],
         },
         {
-            banners: ["presente.png"],
+            banners: [
+                {
+                    src: "Aba_Lingerie.jpg",
+                    href: "/vestuario/body/Feminino?map=c,c,specificationFilter_21&O=OrderByReleaseDateDESC",
+
+                },
+            ],
             link: "/lingeries/?O=OrderByReleaseDateDESC",
             name: "Lingerie",
             siblings: [{
@@ -301,7 +334,7 @@
                     name: "Body",
                 },
                 {
-                    link: "/cinta liga",
+                    link: "/acessorios/cinta liga",
                     name: "Cinta-Liga",
                 },
                 {
@@ -316,9 +349,15 @@
             }],
         },
         {
-            banners: ["Banner_Aba_Masculino.jpg"],
+            banners: [
+                {
+                    src: "Banner_Aba_Masculino.jpg",
+                    href: "/masculino",
+                },
+            ],
             link: "/masculino",
             name: "Masculino",
+            size: "59%",
             siblings: [{
                 items: [{
                     link: "/cuecas?O=OrderByReleaseDateDESC",
@@ -354,9 +393,15 @@
             }],
         },
         {
-            banners: [""],
+            banners: [
+                {
+                    src: "Aba_Outlet.jpg",
+                    href: "/outlet",
+                },
+            ],
             link: "/outlet/?O=OrderByReleaseDateDESC",
             name: "Outlet",
+            highlighted: true,
             siblings: [{
                 items: [{
                     link: "/outlet/sutia-outlet",
@@ -373,10 +418,6 @@
                 {
                     link: "/outlet/vestuario-outlet",
                     name: "Vestuário",
-                },
-                {
-                    link: "/outlet/cuecas-outlet",
-                    name: "Cuecas",
                 },
                 ],
             }],

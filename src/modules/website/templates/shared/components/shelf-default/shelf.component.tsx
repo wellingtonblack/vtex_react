@@ -65,7 +65,7 @@ export class ShelfComponent extends React.Component<ShelfProps, ShelfState> {
         let cards: any[] = [];
 
         if (this.props.template === "t1") {
-            cards = this.state.products.map((product: Product, index: number) => <div className="shelfItem" key={index}><CardTemplate1Component index={index} defaultImage={this.props.defaultImage} width={498} heigth={773} sizeClass="col-xs-12" product={product} /></div>);
+            cards = this.state.products.map((product: Product, index: number) => <div className="shelfItem" key={index}><CardTemplate1Component index={index} defaultImage={this.props.defaultImage} width={500} heigth={323} sizeClass="col-xs-12" product={product} /></div>);
         } else if (this.props.template === "t2") {
             cards = this.state.products.map((product: Product, index: number) => <div className="shelfItem col-md-4 col-6" key={index}><CardTemplate2Component index={index} defaultImage={this.props.defaultImage} width={700} heigth={520} sizeClass="col-xs-12" product={product} /></div>);
         } else if (this.props.template === "t3") {
